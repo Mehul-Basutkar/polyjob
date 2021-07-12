@@ -1,0 +1,37 @@
+<div class="row" id="container">
+  <div class="col-md-2">
+    <div id="wrapper">
+      <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a routerLink="dash" routerLinkActive="selected">Dashboard</a>
+                </li>
+
+                <li>
+                    <a routerLink="myprofile" routerLinkActive="selected">My profile</a>
+                </li>
+
+                <li>
+                    <a routerLink="searchjobs" routerLinkActive="selected">Search jobs</a>
+                </li>
+
+                <li>
+                    <a routerLink="savedjobs" routerLinkActive="selected">Saved jobs</a>
+                </li>
+
+                <li>
+                  <a routerLink="reset" routerLinkActive="selected">Reset Password</a>
+                </li>
+
+                <li>
+                    <a href="#">LogOut</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+  </div>
+  <div class="col-md-8">
+     <router-outlet></router-outlet>
+  </div>
+</div>

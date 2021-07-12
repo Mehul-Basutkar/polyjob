@@ -1,0 +1,43 @@
+<div class="row" id="container">
+  <div class="col-md-2">
+    <div id="wrapper">
+      <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a routerLink="profile" routerLinkActive="selected">Add Profile</a>
+                    <a routerLink="viewProfile" routerLinkActive="selected">View / Edit Profile</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" routerLink="addjob" routerLinkActive="selected">Add job</a>
+                    <a class="dropdown-item" routerLink="viewjob" routerLinkActive="selected">View / update job</a>
+                </li>
+
+                <li>
+                    <a routerLink="events" routerLinkActive="selected">Request Adds / Events</a>
+                </li>
+
+                <li>
+                  <a routerLink="status" routerLinkActive="selected">Request Status</a>
+              </li>
+
+                <li>
+                    <a routerLink="search" routerLinkActive="selected">Search  resumes</a>
+                </li>
+
+
+                <li>
+                  <a routerLinkActive="selected">Reset Password</a>
+                </li>
+
+                <li>
+                    <a (click)="logout()">LogOut</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+  </div>
+  <div class="col-md-8">
+     <router-outlet></router-outlet>
+  </div>
+</div>

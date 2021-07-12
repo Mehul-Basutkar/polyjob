@@ -1,0 +1,35 @@
+<table class="table table-hover table-responsive" *ngFor='let data of JobData; let key of JobData(items); let i = index'>
+  <thead>
+    <tr>
+      <th>Sr. no</th>
+      <th>Job type</th>
+      <th>Selected Technologies</th>
+      <th>Job Description</th>
+      <th>Salary</th>
+      <th>District</th>
+      <th>City</th>
+      <th>Experiance</th>
+      <th>Post</th>
+      <th>Vacancies</th>
+      <th colspan="2">Options</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>{{ i+1 }}</td>
+      <td>{{ data.job_type}}</td>
+      <td>{{data.technologies}}</td>
+      <td>{{data.description}}</td>
+      <td>{{data.salary }}</td>
+      <td>{{data.district}}</td>
+      <td>{{data.city }}</td>
+      <td>{{data.experiance }}</td>
+      <td>{{data.post }}</td>
+      <td>{{data.vacancies}}</td>
+      <td><button class="btn btn-primary">Edit <i class="fas fa-edit"></i></button></td>
+      <td> <button class="btn btn-danger" (click)="delete(data.id)"> Delete <i class="fas fa-trash-alt"></i></button></td>
+    </tr>
+  </tbody>
+
+</table>

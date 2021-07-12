@@ -1,0 +1,26 @@
+<div class="row" id="container">
+  <div class="col-md-2">
+    <div id="wrapper">
+      <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                  Employer
+                  <a routerLink="empProfile" routerLinkActive="selected">View Profile</a>
+                  <a routerLink="empjobs" routerLinkActive="selected">View Jobs</a>
+                  <a routerLink="empaddevents" routerLinkActive="selected">View Add/ Events</a>
+                </li>
+                <li>
+                    <a>Seeker</a>
+                </li>
+                <li>
+                    <a>LogOut</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+  </div>
+  <div class="col-md-8">
+     <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+*{color:black;}
+
+.form-container
+{
+  background: white;
+    padding: 30px 30px;
+    margin-top: 15vh;
+  box-shadow: 1px 4px 26px 11px rgba(14,15,15,1);
+}

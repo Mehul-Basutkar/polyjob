@@ -1,0 +1,43 @@
+.form-container
+    {
+      position: relative;
+      top:5vh;
+      padding: 30px 30px 30px 30px;
+      border-radius:10px;
+      box-shadow: 0px 0px 10px 0px #000;
+
+    }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.body {
+  background-size: cover;
+}
+
+.form-control{
+padding: 6px 16px;
+}
+
+.multiselect-selected-text{
+  padding-right: 65%;
+}
+
+.caret {
+    display:none;
+    height: 0;
+    margin-left: 2px;
+    border-left: 4px solid transparent;
+}
+
+input.form-control.ng-valid.ng-touched {
+  border: 2PX solid green;
+}
+
+span {
+  color: rgb(218, 35, 35);
+ }

@@ -1,0 +1,79 @@
+
+<h3>Orgnisational Details : </h3>
+<table *ngFor='let data of profile'>
+    <tr>
+      <th>Username: </th>
+      <td>{{ data.username}}</td>
+    </tr>
+    <tr>
+      <th>Type of company</th>
+      <td>{{ data.typeofcompany}}</td>
+    </tr>
+    <tr>
+      <th>Type of control</th>
+      <td>{{ data.Typeofcontrol }}</td>
+    </tr>
+    <tr>
+        <th>Type of product</th>
+        <td>{{ data.Typeofproduct }}</td>
+    </tr>
+     <tr>
+         <th>Categories</th>
+         <td>{{ data.Categories }}</td>
+      </tr>
+      <tr>
+          <th>sub-Categories</th>
+          <td>{{ data.subcategories }}</td>
+       </tr>
+       <tr>
+          <th>Number of Employee</th>
+          <td>{{ data.numberofemployee }}</td>
+       </tr>
+       <tr>
+          <th>Address</th>
+          <td>{{ data.Address }}</td>
+       </tr>
+       <tr>
+          <th>District</th>
+          <td>{{ data.district }}</td>
+       </tr>
+       <tr>
+          <th>City</th>
+          <td>{{ data.city }}</td>
+       </tr>
+       <tr>
+          <th>Pin Code:</th>
+          <td>{{ data.Pincode }}</td>
+       </tr>
+       <tr>
+          <th>Achievements</th>
+          <td>{{ data.Achievements }}</td>
+       </tr>
+       <tr>
+          <th>Optional Contact Number:</th>
+          <td>{{ data.optionalcontactnumber }}</td>
+       </tr>
+       <tr>
+          <th>Company Image(s)</th>
+          <td>{{ data.companyimages }}</td>
+       </tr>
+
+       <tr>
+          <th>Name</th>
+          <td>{{ data.contactPname }}</td>
+       </tr>
+       <tr>
+          <th>Designation</th>
+          <td>{{ data.designation }}</td>
+       </tr>
+       <tr>
+          <th>Contact Number:</th>
+          <td>{{ data.contactnum }}</td>
+       </tr>
+       <tr>
+          <th>Email Id:</th>
+          <td>{{ data.email }}</td>
+       </tr>
+</table>
+
+<button class="btn btn-primary">Edit</button>

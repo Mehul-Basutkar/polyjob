@@ -1,0 +1,33 @@
+<table class="table table-hover table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Sr. no</th>
+      <th scope="col">Job type</th>
+      <th scope="col">Selected Technologies</th>
+      <th scope="col">Job Description</th>
+      <th scope="col">Salary</th>
+      <th scope="col">District</th>
+      <th scope="col">City</th>
+      <th scope="col">Experiance</th>
+      <th scope="col">Post</th>
+      <th scope="col">Vacancies</th>
+      <th scope="col" colspan="2">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let data of LoadedData; let i = index'>
+      <td>{{ i+1 }}</td>
+      <td>{{ data.job_type}}</td>
+      <td>{{data.technologies}}</td>
+      <td>{{data.description}}</td>
+      <td>{{data.salary }}</td>
+      <td>{{data.district}}</td>
+      <td>{{data.city }}</td>
+      <td>{{data.experiance }}</td>
+      <td>{{data.post }}</td>
+      <td>{{data.vacancies}}</td>
+      <td><button class="btn btn-primary" (click)="update(data.id, i)"><i class="fas fa-edit"></i></button></td>
+      <td> <button class="btn btn-danger" (click)="delete(data.id)"> <i class="fas fa-trash-alt"></i></button></td>
+    </tr>
+  </tbody>
+</table>

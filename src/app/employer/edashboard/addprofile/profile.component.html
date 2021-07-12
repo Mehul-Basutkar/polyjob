@@ -1,0 +1,273 @@
+ <div class="body">
+    <section class="container-fluid d-flex align-items-center justify-content-center">
+      <section class="row">
+        <section class="col-12 col-md-12">
+          <form class="form-container mb-4" style="width:500px; margin:auto" [formGroup]="addProfile" (ngSubmit)="submision()">
+            <h3 style="text-align: center;">{{ formtitle }}</h3>
+
+            <div class="container-sm">
+              <div class="form-group">
+                <label for="User Name">Username:</label>
+                <input type="text" class="form-control" placeholder="user name" formControlName="username" required>
+              </div>
+
+              <div class="form-group">
+                <label for="post">Type of company</label>
+                <select class="form-control" name="type" formControlName="typeofcompany">
+                  <option>Large-scale</option>
+                  <option>medium-scale</option>
+                  <option>Small-scale</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="post">Type of control</label>
+                <select class="form-control" name="control" formControlName="Typeofcontrol">
+                  <option>Private-ltd</option>
+                  <option>Goverment</option>
+                  <option>Semi-Goverment</option>
+                  <option>Partenership</option>
+                  <option>Propriter</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="post">Type of product</label>
+                <select class="form-control" name="product" formControlName="Typeofproduct">
+                  <option>option</option>
+                  <option>2option</option>
+                  <option>3option</option>
+                  <option>4option</option>
+                  <option>5option</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="Categories">Categories:</label>
+                <td><br>
+                <td color="black"><select class="form-control" id="countrySelect" required formControlName="Categories" size="1">
+                    <option value="">--Choose Categories --</option>
+                    <option>Ahmednagar</option>
+                    <option>Akola</option>
+                    <option>Amravati</option>
+                    <option>Aurangabad</option>
+                    <option>Beed</option>
+                    <option>Bhandara</option>
+                    <option>Buldhana</option>
+                    <option>Chandrapur</option>
+                    <option>Dhule</option>
+                    <option>Gadchiroli</option>
+                    <option>Gondia</option>
+                    <option>Hingoli</option>
+                    <option>Jalgaon</option>
+                    <option>Jalna</option>
+                    <option>Kolhapur</option>
+                    <option>Latur</option>
+                    <option>Mumbai</option>
+                    <option>Nagpur</option>
+                    <option>Nanded</option>
+                    <option>Nandurbar</option>
+                    <option>Nashik</option>
+                    <option>Osmanabad</option>
+                    <option>Palghar</option>
+                    <option>Parbhani</option>
+                    <option>Pune</option>
+                    <option>Raigad</option>
+                    <option>Ratnagiri</option>
+                    <option>Sangli</option>
+                    <option>Satara</option>
+                    <option>Sindhudurg</option>
+                    <option>Solapur</option>
+                    <option>Thane</option>
+                    <option>Wardha</option>
+                    <option>Washim</option>
+                    <option>Yavatmal</option>
+                  </select>
+                </td>
+              </div>
+
+              <div class="form-group">
+                <label for="sub-Categories">sub-Categories</label>
+                <td color="black"><select class="form-control" color="black" id="citySelect" required formControlName="subcategories"
+                    size="1">
+                    <option class="form-group" value="">--sub-Categories--</option>
+                    <option></option>
+                  </select>
+                </td>
+              </div>
+
+              <script type="text/javascript">
+                var citiesByState = {
+                  Ahmednagar: ["Ahmednagar", "Akole", "Akole taluka", "Bhandardara", "Bhingar", "Deolali", "Pravara", "Ghulewadi", "Guruwar Peth", "Jamkhed taluka", "Kopargaon", "Kopargaon taluka", "Miri", "Nagapur", "Nagar taluka", "Nagardeole", "Nevasa", "Nevasa taluka", "Nighoj", "Parner taluka", "Pathardi taluka", "Puntamba", "Rahata taluka", "Rahta Pimplas", "Rahuri", "Rahuri taluka", "Sangamner", "Shevgaon taluka", "Shirdi", "Shrigonda", "Shrigonda taluka", "Shrirampur", "Shrirampur (Rural)", "Shrirampur taluka", "Siddhatek", "Singnapur", "Takali Dhokeshwar", "Tisgaon"],
+                  Akola: ["Akot", "Balapur", "Akola district", "Barshitakli", "Borgaon Manju", "Lohara", "Akola Malkapur", "Akola Murtajapur", "Patur", "Telhara", "Ujaleshwar", "Umri Pragane Balapur"],
+                  Amravati: ["Achalpur", "Anjangaon", "Badnera", "Bhatkuli", "Chandur", "Chandurbazar", "Chikhaldara", "Kanpur", "Daryapur", "Dattapur Dhamangaon", "Dharni", "Hiwarkhed", "Jhangirpur", "Kaundinyapur", "Nandgaon Khandeshwar", "Paratwada", "Shendurjana Ghat", "Tiosa", "Walgaon", "Warud"],
+                  Aurangabad: ["Aurangabad Cantonment", "Aurangabad", "Gangapur", "Kannad", "Khuldabad", "Paithan", "Phulambri", "Sillod", "Soegaon", "Vaijapur"],
+                  Beed: ["Ambajogai", "Ashti", "Beed", "Chausala", "Dharur", "Gevrai", "Kaij", "Majalgaon", "Manur", "Parli", "Patoda", "Shirur Kasar", "Wadwani"],
+                  Bhandara: ["Adyar", "Andhalgaon", "Bhandara", "Dewhadi", "Dighori", "Ganeshpur", "Lakhandur", "Lakhani", "Mohadi", "Palandur", "Pauni", "Rajoli", "Sakoli", "Sawari Jawaharnagar", "Shahapur", "Tumsar", "Warthi"],
+                  Buldhana: ["Buldhana", "Deulgaon Raja", "Dhamangaon Badhe", "Jalgaon Jamod", "Jamod", "Khamgaon", "Lonar", "Malkapur", "Mehkar", "Nandura", "Sangrampur", "Shegaon", "Sindkhed Raja", "Sonala"],
+                  Chandrapur: ["Ballarpur", "Bhadravati", "Bramhapuri", "Chimur", "Warora", "Durgapur", "Gadchandur", "Ghugus", "Gondpipari", "Jivati", "Kondumal", "Korpana", "Mul", "Nagbhid", "Nakoda", "Nanda", "Pombhurna", "Rajura", "Saoli", "Sasti", "Shivajinagar", "Sindewahi", "Tadali", "Urjanagar"],
+                  Dhule: ["Betawad", "Dhule", "Dondaicha-Warwade", "June Dhule", "Nardana", "Sakri", "Shirpur", "Shirpur-Warwade", "Sindkheda", "Songir"],
+                  Gadchiroli: ["Aheri", "Armori", "Charmorshi", "Desaiganj", "Dhanora", "Sironcha", "Bhamragad", "Mulchera", "Korchi", "Kurkheda", "Etapalli", "Surjagad", "Hemalkasa"],
+                  Gondia: ["Amgaon", "Arjuni Morgaon", "Deori", "Gondia", "Goregaon", "Sadak Arjuni", "Salekasa", "Tirora"],
+                  Hingoli: ["Akhada Balapur", "Aundha Nagnath", "Basmath", "Babhulgaon", "Hingoli", "Jawala Bazar", "Kalamnuri", "Satamba", "Sengaon"],
+                  Jalgaon: ["Amalner", "Anjale", "Bhadgaon", "Bodwad", "Chalisgaon", "Chopda", "Dahiwad", "Dharangaon", "Erandol", "Faizpur", "Fapore Bk", "Jalgaon", "Jamner", "Kandari", "Muktainagar", "Nagardeole Bk", "Nashirabad", "Nimbhore Budruk", "Pachora", "Pahur", "Parola", "Pimpalgaon Bk", "Raver", "Savda", "Tongaon", "Varangaon"],
+                  Jalna: ["Ambad", "Badnapur", "Bhokardan", "Ghansawangi", "Jafferabad", "Jalna", " Mantha", "Partur"],
+                  Kolhapur: ["Ajara", "Bhudargad", "Chandgad", "Dhadhre", "Gadhinglaj", "Gadhinglaj Taluka", "Gaganbawada", "Gandhinagar", "Halkarni", "Harali", "Hatkanangale", "Hupari", "Ichalkaranji", "Jaysingpur", "Kabnur", "Kadgaon", "Kagal", "Kalambe Turf Thane", "Kalyanpur", "Karvir", "Kasaba Sangaon", "Kodoli", "Kolhapur", "Korochi", "Kuruntwad", "Mahagaon", "Malkapur", "Mugruwadi", "Murgud", "Nesari(Pachgaon)", "Panhala", "Peth Vadgaon", "Radhanagari"
+                    , "Sangrul", "Savarde Budhruk", "Shahapur(Ichalkaranji)", "Shahuwadi", "Shirol", "Shirol Taluka", "Tamgaon", "Uchgaon", "Uttur", "Vadakshivale", "Vadgaon Kasba"],
+                  Latur: ["Ahmedpur", "Ausa", "Deoni", "Jalkot", "Latur", "Nilanga", "Renapur", "Shirur Anantpal", "Udgir"],
+                  Mumbai: ["Andheri", "Bandra", "Borivali", "Bhivandi", "Dahisar", "Goregaon", "Jogeshwari", "Juhu", "Kandivali", "Khar", "Malad", "Santacruz", "Vile Parle", "Bhandup", "Ghatkopar", "Kanjurmarg", "Kurla", "Mulund", "Thane", "Powai", "Vidyavihar", "Vikhroli", "Chembur", "Govandi", "Mankhurd", "Trombay", "Antop Hill", "Byculla", "Colaba", "Dadar", "Fort", "Girgaon", "Kalbadevi", "Kamathipura", "Matunga", "Parel", "Tardeo"],
+                  Nagpur: ["Bhiwapur", "Chicholi", "Davlameti", "Digdoh", "Hingna", "Jalalkheda", "Kalameshwar", "Kamptee", "Kandri", "Kanhan (Pipri)", "Katol", "Khapa", "Kuhi", "Mahadula", "Mandhal", "Mansar", "Mauda", "Mohpa", "Mowad", "Nagpur", "Nagpur Rural", "Nagpur Urban", "Narkhed", "Nildoh", "Parseoni", "Ramtek", "Saoner", "Sillewada", "Sonegaon (Nipani)", "Tekadi", "Totaladoh", "Umred", "Wadi", "Walani", "Wanadongri", "Yerkheda"],
+                  Nanded: ["Ardhapur", "Bhokar", "Biloli", "Deglur", "Dharmabad", "Hadgaon", "Himayatnagar", "Kandhar", "Kinwat", "Kundalwadi", "Loha", "Nanded district", "Mahur", "Mudkhed", "Naigaon", "Nanded", "Nanded-Waghala", "Peth Umri", "Sowali", "Umri", "Wajegaon"],
+                  Nandurbar: ["Akkalkuwa", "Dhadgaon", "Kondaibari", "Nandurbar", "Navapur", "Purushottamnagar", "Ranala", "Shahada", "Talode", "Visarwadi"],
+                  Nashik: ["Bhagur", "Chandwad", "Dabhadi", "Malegaon", "Datyane", "Deola", "Deolali", "Dindori", "Dyane", "Eklahare", "Ghoti Budruk", "Igatpuri", "Lasalgaon", "Malegaon", "Manmad", "Mogal Nagar Kamatwade", "Nagarsol", "Nampur", "Nandgaon", "Nashik Road", "Niphad", "Ozar", "Peint", "Pimapalas", "Satana", "Shivadi", "Sinnar", "Soyagaon", "Surgana", "Trimbak", "Vadgaon Malegaon", "Vadner", "Vinchur"],
+                  Osmanabad: ["Bhoom", "Kalamb", "Lohara Bk", "Murum", "Naldurg", "Osmanabad", "Paranda", "Tuljapur", "Umarga", "Washi"],
+                  Palghar: ["Boisar", "Chinchani", "Dahanu", "Dandi Census Town", "Gokhivare", "Kelwa", "Khaira", "Khardi", "Makunsar", "Manor", "Mokhada", "Nala Sopara", "Navghar", "Palghar", "Sai Baba Boulevard", "Jawhar", "Salwad Census Town", "Saphale", "Shirgaon Census Town", "Talasari", "Tarapur", "Umroli", "Vada", "Vajreshwari", "Vasai", "Vikramgad", "Virar"],
+                  Parbhani: ["Gangakhed", "Jintur", "Manwath", "Palam", "Parbhani", "Pathri", "Purna", "Sailu", "Sonpeth"],
+                  Pune: ["Akurdi", "Alandi", "Amanora Park Town", "Ambegaon", "Aundh", "Baramati", "Bhor", "Bhosari", "Baner", "Bavdhan", "Chakan", "Chas Ghodegaon", "Chinchwad", "Chikhali", "Daund", "Dehu", "Dehu Road", "Decan", "Dhayari", "Ganj Peth", "Gurholi", "Guruwar Peth", "Hadapsar", "Hinjawadi", "Haveli", "Indapur", "Jejuri", "Junnar", "Kamshet", "Karli", "Katraj", "Khadkale", "Khadki", "Khadakwasala", "Khodad", "Kothrud", "Kusgaon Budruk", "Lavasa", "Lonavla", "Manchar", "Manjri", "Maval", "Megapolis Pune", "Moshi", "Nanded City", "Narayangaon", "Nira", "Pimpri", "Pimpri-Chinchwad", "Pune", "Pune Metropolitan Region", "Raireshwar", "Rajgurunagar (Khed)", "Saswad", "Shirur", "Shivatkar (Nira)", "Somatane", "Shivajinagar", "Talegaon Dabhade", "Tathavade", "Vadgaon Budruk", "Vadgaon Maval", "Warje", "Whagholi", "Yerwanda"],
+                  Raigad: ["Agar Panchaitan", "Alibag", "Ambivali Tarf Wankhal", "Bhivpuri", "Birwadi", "Chaul", "Dhatau", "Diwiparangi", "Goregaon", "Harihareshwar", "Kalundre", "Kamothe", "Karanja", "Karjat", "Kashid", "Kegaon", "Khalapur", "Kherdi", "Khopoli", "Lonere", "Mahad", "Mangaon", "Matheran", "Mhasla", "Mohpada", "Mora", "Murud", "Nagothana", "Neral", "Palasdari", "Pali", "Panvel", "Pen", "Poladpur", "Roha", "Roha Ashtami", "Shelu", "Shivthar Ghal", "Shrivardhan", "Tala", "Taloje Panchnad", "Uran", "Utekhol", "Vichumbe"],
+                  Ratnagiri: ["Anjanvel", "Bankot", "Chiplun", "Dapoli Camp", "Ganpatipule", "Guhagar", "Jalgaon", "Janavale", "Khed", "Kule(Sangameshwar)", "Lanja", "Nachane", "Pabhare", "Pophali", "Rajapur", "Ratnagiri", "Sangameshwar", "Satawali", "Shringartali"],
+                  Sangli: ["Ashta", "Bhilawadi", "Budhgaon", "Hingangaon (Kavathe Mahankal)", "Jat", "Kadegaon", "Kavathe-Mahankal", "Khadegaon", "Khanapur(Vita)", "Kirloskarwadi", "Kundal", "Madhavnagar", "Manadur", "Miraj", "Palus", "Sangli", "Bamani", "Sangli-Miraj & Kupwad", "Savlaj", "Shirala", "Solapur South", "Tasgaon", "Uran Islampur", "Vita", "Walwa", "Wategaon"],
+                  Satara: ["Aundh(Satara)", "Bhilkati", "Godoli", "Helwak", "Hingangaon", "Jakhangaon", "Jaoli", "Karad", "Karanje Turf Satara", "Karawadi", "Khandala", "Khatav", "Khed(Satara)", "Kondhwali", "Koregaon", "Koynanagar", "Maan", "Mahabaleshwar", "Malkapur(Karad)", "Masur", "Mhaswad", "Panchgani", "Patan", "Phaltan", "Rahimatpur", "Sakharwadi", "Satara (city)", "Shirwal", "Tadawale Sammat Wagholi", "Talbid", "Vaduj", "Vanvadi (Sadashivgad)", "Wagholi(Satara)", "Wai", "Waki", "Jaoli"],
+                  Sindhudurg: ["Amboli", "Banda", "Devgad taluka", "Dodamarg taluka", "Girye", "Kankavli", "Kudal", "Malvan", "Nerur", "Oros", "Otvane", "Pural", "Rameshwar Wadi", "Sawantwadi", "Vaibhavwadi taluka", "Vengurla", "Vijaydurg (town)"],
+                  Solapur: ["Akkalkot", "Akluj", "Barshi", "Bhigwan", "Dudhani", "Guruwar Peth", "Hotgi", "Karmala", "Kurduvadi", "Madha", "Maindargi", "Malshiras", "Mangalwedha", "Mohol", "Nandeshwara", "Pandharpur", "Piliv", "Sangole", "Solapur"],
+                  Thane: ["Ambarnath", "Ambivli", "Badlapur", "Dighe (Navi Mumbai)", "Dombivli", "Kalwa", "Kalyan (city)", "Karivali", "Kasara", "Katai", "Katkar", "Kausa", "Khadavli", "Kharegaon", "Khoni", "Kon", "Kopar Khairane", "Kopharad", "Kopri", "Mohone", "Mumbra", "Murbad", "Navghar-Manikpur", "Padagha", "Pasthal", "Sandor", "Sanpada", "Shahad", "Shahapur", "Shelar", "Shil Phata", "Taps Colony", "Thane", "Titwala", "Turbhe", "Umbar Pada Nandade", "Uttan", "Vangani", "Vashind", "Vasind", "Vithalwadi", "Waghbil", "Waliv"],
+                  Wardha: ["Arvi", "Ashti", "Deoli", "Hinganghat", "Jamb", "Karanja", "Kundina", "Pulgaon", "Samudrapur", "Seloo", "Sindi Turf Hindnagar", "Sindi", "Wardha"],
+                  Washim: ["Karanja Lad", "Malegaon", "Mangrulpir", "Manora", "Medshi", "Risod", "Washim"],
+                  Yavatmal: ["Akola Bazar", "Arni", "Babhulgaon", "Borisinh", "Darwha", "Digras", "Ghatanji", "Kelapur", "Ladkhed", "Mahagaon", "Maregaon", "Ner", "Pandharkaoda", "Pusad", "Rajur", "Ralegaon", "Umarkhed", "Umarsara", "Vasantnagar", "Wadgaon Road", "Waghapur", "Wani", "Yavatmal", "Zari Jamani"]
+                }
+                function makeSubmenu(value) {
+                  if (value.length == 0) document.getElementById("citySelect").innerHTML = "<option></option>";
+                  else {
+                    var citiesOptions = "";
+                    for (cityId in citiesByState[value]) {
+                      citiesOptions += "<option>" + citiesByState[value][cityId] + "</option>";
+                    }
+                    document.getElementById("citySelect").innerHTML = citiesOptions;
+                  }
+                }
+                function displaySelected() {
+                  var country = document.getElementById("countrySelect").value;
+                  var city = document.getElementById("citySelect").value;
+                  alert(country + "\n" + city);
+                }
+                function resetSelection() {
+                  document.getElementById("countrySelect").selectedIndex = 0;
+                  document.getElementById("citySelect").selectedIndex = 0;
+                }
+              </script>
+
+              <div class="form-group">
+                <label for="Number of Employee">Number of Employee</label>
+                <input type="number" class="form-control" placeholder="Number of Employee" formControlName="numberofemployee" required>
+              </div>
+
+              <div class="form-group">
+                <label for="Address">Address:</label>
+                <textarea class="form-control" placeholder="address" rows="4" cols="50" formControlName="Address"
+                  required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="district">District</label>
+                <td><br>
+                <td color="black"><select class="form-control" required formControlName="district" size="1">
+                    <option value="">--Choose District--</option>
+                    <option>Ahmednagar</option>
+                    <option>Akola</option>
+                    <option>Amravati</option>
+                    <option>Aurangabad</option>
+                    <option>Beed</option>
+                    <option>Bhandara</option>
+                    <option>Buldhana</option>
+                    <option>Chandrapur</option>
+                    <option>Dhule</option>
+                    <option>Gadchiroli</option>
+                    <option>Gondia</option>
+                    <option>Hingoli</option>
+                    <option>Jalgaon</option>
+                    <option>Jalna</option>
+                    <option>Kolhapur</option>
+                    <option>Latur</option>
+                    <option>Mumbai</option>
+                    <option>Nagpur</option>
+                    <option>Nanded</option>
+                    <option>Nandurbar</option>
+                    <option>Nashik</option>
+                    <option>Osmanabad</option>
+                    <option>Palghar</option>
+                    <option>Parbhani</option>
+                    <option>Pune</option>
+                    <option>Raigad</option>
+                    <option>Ratnagiri</option>
+                    <option>Sangli</option>
+                    <option>Satara</option>
+                    <option>Sindhudurg</option>
+                    <option>Solapur</option>
+                    <option>Thane</option>
+                    <option>Wardha</option>
+                    <option>Washim</option>
+                    <option>Yavatmal</option>
+                  </select>
+                </td>
+              </div>
+
+              <div class="form-group">
+                <label for="city">City</label>
+                <td color="black"><select class="form-control" color="black" id="citySelect" required formControlName="city"
+                    size="1">
+                    <option class="form-group" value="">--Choose City--</option>
+                    <option></option>
+                  </select>
+                </td>
+              </div>
+
+              <div class="form-group">
+                <label for="Pincode:">Pin Code:</label>
+                <input type="number" class="form-control" placeholder="pin" formControlName="Pincode" required>
+              </div>
+
+              <div class="form-group">
+                <div class="form-group">
+                  <label for="Achievements">Achievements</label>
+                  <textarea class="form-control" formControlName="Achievements" type="textarea"
+                    placeholder="Awards won by your company"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="Optional Contact Number">Optional Contact Number:</label>
+                  <input type="tel" class="form-control" placeholder="Optional Contact Number" formControlName="optionalcontactnumber">
+                </div>
+
+                <div class="form-group">
+                  <label for="Company Images">Company Image(s)</label><br>
+                  <input type="file" name="my_file[]" multiple formControlName="companyimages" />
+                  <input type="button" value="Upload">
+                </div>
+
+                <div class="form-group">
+                  <label>Your Orgnisation's Contact Person's details :</label><br>
+
+                  <label>Name:</label>
+                  <input type="text" class="form-control" placeholder="Name" formControlName="contactPname">
+
+                  <label>Designation:</label>
+                  <input type="text" class="form-control" placeholder="Designation" formControlName="designation">
+
+                  <label>Contact Number:</label>
+                  <input type="tel" class="form-control" placeholder="contact-number" formControlName="contactnum">
+
+                  <label>Email Id:</label>
+                  <input type="Email" class="form-control" placeholder="Email-id" formControlName="email">
+                </div>
+
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Submit</button> &nbsp; &nbsp;
+                  <button type="reset" class="btn btn-primary">Cancel</button>
+                </div>
+              </div>
+            </div>
+  </form>
+  </section>
+  </section>
+  </section>
+  </div>

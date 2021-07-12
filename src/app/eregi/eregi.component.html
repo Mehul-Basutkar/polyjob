@@ -1,0 +1,47 @@
+<div class="body">
+  <section class="container-fluid d-flex align-items-center justify-content-center">
+    <section class="row">
+      <section class="col-12 col-md-12">
+
+        <div *ngIf="loading" style="text-align: center;">
+          <app-loading></app-loading>
+        </div>
+          <form class="form-container" style="width:500px; margin:auto;" [formGroup]="eregi" (ngSubmit)="submissionn()" *ngIf="!loading">
+              <h3 style="text-align: center;">REGISTRATION</h3>
+              <div class="container-sm">
+
+                <div class="form-group">
+                  <label for="User Name">Company Name:</label>
+                  <input type="text" formControlName="companyName" class="form-control" placeholder="Company Name"  name="companyname" minlength="5" required>
+                  <span *ngIf="!eregi.get('companyName').valid && eregi.get('companyName').touched" class="help-block">Please enter valid/ full company name.</span>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" formControlName="companyEmail" class="form-control" placeholder="Enter email" email required>
+                    <span *ngIf="!eregi.get('companyEmail').valid && eregi.get('companyEmail').touched" class="help-block">Please enter valid email.</span>
+                </div>
+
+                <div class="form-group">
+                <label for="mobile no">Mobile Number:</label>
+                <input type="tel" formControlName="companyMob" class="form-control" placeholder="phone number" pattern="[789][0-9]{9}" name="mobilenumber" required>
+                <span *ngIf="!eregi.get('companyMob').valid && eregi.get('companyMob').touched" class="help-block">please enter valid company mobile no.</span>
+              </div>
+
+               <div class="text-center">
+                <button type="submit" class="btn btn-primary" name="save" [disabled]="!eregi.valid">Submit</button> &nbsp;&nbsp;
+                <button type="reset" class="btn btn-primary" name="reset">Cancel</button>
+              </div> <br><br>
+              <div class="alrt alert-danger" *ngIf="error">
+                <p>{{ error }}</p>
+              </div>
+            </div>
+        </form>
+</section>
+</section>
+</section>
+</div>
+
+
+

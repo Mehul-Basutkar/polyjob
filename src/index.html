@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Polyjob</title>
+  <title>Job</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -10,4 +10,27 @@
 <body>
   <app-root></app-root>
 </body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA3uHlKPkePiT285NReIcJttzYBO7YZsf4",
+    authDomain: "jobbackend.firebaseapp.com",
+    databaseURL: "https://jobbackend.firebaseio.com",
+    projectId: "jobbackend",
+    storageBucket: "jobbackend.appspot.com",
+    messagingSenderId: "1000839421150",
+    appId: "1:1000839421150:web:2a141f2dac4426198fb64f",
+    measurementId: "G-BP7VNDV4DZ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </html>

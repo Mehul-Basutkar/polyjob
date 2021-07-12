@@ -1,0 +1,90 @@
+{
+  "employer": [
+    {
+      "id": 1,
+      "companyName": "abcd",
+      "companyEmail": "abcd@gmail.com",
+      "companyMobile": 1234567890
+    },
+    {
+      "id": 2,
+      "companyName": "efgh",
+      "companyEmail": "efgh@gmail.com",
+      "companyMobile": 9876543210
+    },
+    {
+      "id": 3,
+      "companyName": "PolyScript",
+      "companyEmail": "RaviSir@polyscript.com",
+      "companyMobile": "01234569"
+    },
+    {
+      "id": 4,
+      "companyName": "Srushtidhar pvt.ltd.",
+      "companyEmail": "Srushtidhar@gmail.com",
+      "companyMobile": "12657945"
+    },
+    {
+      "id": 5,
+      "companyName": "mehul",
+      "companyEmail": "Mehul@gg",
+      "companyMobile": "877889879"
+    },
+    {
+      "id": 6,
+      "companyName": "abcd pvt. ltd.",
+      "companyEmail": "abcd@abcd.com",
+      "companyMobile": "9632587410"
+    }
+  ],
+  "Addjob": [
+    {
+      "id": 1,
+      "jobType": "Full time",
+      "technologies": "Blockchain",
+      "jobDescription": "aaaaaaa",
+      "salary": "above 50,000",
+      "district": "Pune",
+      "city": "",
+      "experiance": "1 year",
+      "post": "Manager",
+      "vacancies": 1
+    },
+    {
+      "id": 2,
+      "jobType": "",
+      "technologies": [],
+      "jobDescription": "",
+      "salary": "",
+      "district": "",
+      "city": "",
+      "experiance": "",
+      "post": "",
+      "vacancies": null
+    },
+    {
+      "id": 3,
+      "jobType": "",
+      "technologies": [],
+      "jobDescription": "",
+      "salary": "",
+      "district": "",
+      "city": "",
+      "experiance": "",
+      "post": "",
+      "vacancies": null
+    },
+    {
+      "id": 4,
+      "jobType": "",
+      "technologies": [],
+      "jobDescription": "",
+      "salary": "",
+      "district": "",
+      "city": "",
+      "experiance": "",
+      "post": "",
+      "vacancies": null
+    }
+  ]
+}
